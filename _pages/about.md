@@ -2,16 +2,16 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: <a href='#'>University of Virginia</a>.jxd2cf@virginia.edu.
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>140M Gilmer Hall</p>
+    <p>485 McCormick Rd</p>
+    <p>Charlottesville, VA 22903</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -27,9 +27,11 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder. I am a Ph.D. candidate in Developmental Psychology at the University of Virginia, advised by Dr. Amrisha Vaish. My research focuses on children’s social cognition and behavior in contexts of inequality, including trust, prosociality, and fairness reasoning.
+Hi! I am a Ph.D. candidate in Developmental Psychology at the University of Virginia, advised by Dr. Amrisha Vaish. I study how children make sense of an unequal world. My research focuses on how children’s socioemotional responses, such as prosocial behavior and trust, are shaped by their experiences of inequality, and how their perceptions of fairness moderate these effects.
 
-I’m currently working on several experimental studies with children ages 5–9, exploring how their experiences with inequality shape their responses to others. I'm also broadly interested in how children think about merit, group identity, and structural causes of inequality.
+I’m also interested in how children reason about and justify inequality: how they think about merit, need, social group membership, and structural factors. More broadly, I explore how these beliefs and behaviors are shaped by cultural norms and socialization.
+
+I expect to complete my Ph.D. in 2026 and am currently seeking a postdoctoral position in developmental psychology
 
 Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
 
