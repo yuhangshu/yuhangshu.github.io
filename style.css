@@ -1,0 +1,429 @@
+:root{
+  --paper:#FAFBF9;
+  --ink:#1F2A38;
+  --ink-soft:#5C6B7A;
+  --spruce:#3D5068;
+  --spruce-deep:#28394A;
+  --token:#E0863A;
+  --line:#DCE1E6;
+  --card:#FFFFFF;
+  --link:#1D5FA8;
+  --link-hover:#123F70;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Public Sans',system-ui,sans-serif;
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--link);text-decoration:none;}
+a:hover{color:var(--link-hover);text-decoration:underline;text-underline-offset:3px;}
+a:focus-visible,button:focus-visible{outline:2px solid var(--spruce);outline-offset:3px;border-radius:2px;}
+.wrap{max-width:880px;margin:0 auto;padding:0 24px;}
+
+/* ---------- Nav ---------- */
+nav{
+  position:sticky;top:0;z-index:10;
+  background:rgba(250,251,249,.88);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  max-width:880px;margin:0 auto;padding:14px 24px;
+  display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;
+}
+.nav-name{font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem;color:var(--ink);}
+.nav-name:hover{text-decoration:none;}
+.nav-links{display:flex;gap:22px;flex-wrap:wrap;}
+.nav-links a{
+  font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.06em;
+  color:var(--ink-soft);text-transform:uppercase;padding-bottom:2px;
+}
+.nav-links a:hover{color:var(--spruce);text-decoration:none;}
+.nav-links a.active{color:var(--spruce);border-bottom:2px solid var(--token);}
+
+/* ---------- Page header ---------- */
+.page-head{padding:64px 0 8px;}
+.eyebrow{
+  font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--spruce);margin-bottom:14px;
+}
+h1{
+  font-family:'Fraunces',serif;font-weight:600;
+  font-size:clamp(2.1rem,5.5vw,3.1rem);line-height:1.1;
+  letter-spacing:-.01em;margin-bottom:18px;
+}
+h2{
+  font-family:'Fraunces',serif;font-weight:600;
+  font-size:1.55rem;margin:44px 0 16px;letter-spacing:-.005em;
+}
+h2:first-of-type{margin-top:28px;}
+p{max-width:none;margin-bottom:16px;}
+.muted{color:var(--ink-soft);}
+main{padding-bottom:72px;}
+
+/* ---------- Home hero ---------- */
+.hero{
+  display:grid;grid-template-columns:260px 1fr;gap:44px;
+  align-items:start;padding:56px 0 40px;
+}
+.portrait{
+  width:260px;height:320px;border-radius:10px;object-fit:cover;
+  border:1px solid var(--line);background:var(--card);
+}
+.portrait-placeholder{
+  width:260px;height:320px;border-radius:10px;
+  border:1px dashed var(--line);background:var(--card);
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  color:var(--ink-soft);font-size:.82rem;padding:16px;
+  font-family:'IBM Plex Mono',monospace;line-height:1.5;
+}
+.tagline{
+  font-size:1.15rem;line-height:1.55;color:var(--ink-soft);
+  max-width:560px;margin-bottom:28px;
+}
+.tagline strong{color:var(--ink);font-weight:600;}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
+.btn{
+  display:inline-block;padding:11px 22px;border-radius:6px;
+  font-weight:600;font-size:.95rem;border:1px solid var(--spruce);
+}
+.btn-solid{background:var(--spruce);color:#fff;}
+.btn-solid:hover{background:var(--spruce-deep);text-decoration:none;}
+.btn-ghost{color:var(--spruce);}
+.btn-ghost:hover{background:#E7EAEE;text-decoration:none;}
+
+/* Signature motif: the token split */
+.split{display:flex;align-items:center;gap:8px;margin:34px 0 10px;}
+.split .tok{
+  width:13px;height:13px;border-radius:50%;
+  background:var(--token);
+  box-shadow:inset 0 -2px 0 rgba(0,0,0,.12);
+}
+.split .gap{width:52px;position:relative;flex:none;}
+.split .gap::after{
+  content:"";position:absolute;left:50%;top:50%;
+  width:1px;height:24px;background:var(--line);
+  transform:translate(-50%,-50%);
+}
+@media (prefers-reduced-motion:no-preference){
+  .split .tok{opacity:0;transform:translateY(-8px);animation:drop .5s ease forwards;}
+  .split .tok:nth-child(1){animation-delay:.05s}
+  .split .tok:nth-child(2){animation-delay:.12s}
+  .split .tok:nth-child(3){animation-delay:.19s}
+  .split .tok:nth-child(4){animation-delay:.26s}
+  .split .tok:nth-child(5){animation-delay:.33s}
+  .split .tok:nth-child(6){animation-delay:.40s}
+  .split .tok:nth-child(7){animation-delay:.47s}
+  .split .tok:nth-child(9){animation-delay:.58s}
+  .split .tok:nth-child(10){animation-delay:.66s}
+  .split .tok:nth-child(11){animation-delay:.74s}
+  @keyframes drop{to{opacity:1;transform:translateY(0);}}
+}
+.split-caption{
+  font-family:'IBM Plex Mono',monospace;font-size:.74rem;
+  color:var(--ink-soft);letter-spacing:.03em;
+}
+
+/* ---------- Home: token split paired with illustration ---------- */
+.split-feature{
+  display:flex;align-items:center;gap:30px;flex-wrap:wrap;
+  margin:34px 0 8px;
+}
+.split-feature .split-text{flex:1;min-width:220px;}
+.split-feature .split{margin:0 0 10px;}
+.split-feature .split-caption{margin:0;}
+.split-illus{
+  width:190px;height:auto;flex:none;border-radius:14px;
+}
+@media (max-width:640px){
+  .split-illus{width:140px;}
+}
+
+/* ---------- Section label ---------- */
+.sec-label{
+  font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--spruce);margin:52px 0 6px;
+  display:flex;align-items:center;gap:10px;
+}
+.sec-label::before{
+  content:"";width:9px;height:9px;border-radius:50%;
+  background:var(--token);flex:none;
+  box-shadow:inset 0 -1.5px 0 rgba(0,0,0,.12);
+}
+
+/* ---------- Research themes ---------- */
+.themes{display:grid;gap:16px;margin:24px 0 8px;}
+.theme{
+  background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:24px 26px;
+}
+.theme h3{
+  font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;margin-bottom:8px;
+}
+.theme p{font-size:.97rem;color:var(--ink-soft);margin:0;max-width:none;}
+
+/* ---------- Status badge (used on Research page citations) ---------- */
+.status{
+  font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--spruce);
+  background:#E7EAEE;border-radius:4px;padding:2px 8px;margin-left:6px;
+  white-space:nowrap;
+}
+
+/* ---------- News ---------- */
+.news-item{
+  display:grid;grid-template-columns:120px 1fr;gap:20px;
+  padding:18px 0;border-bottom:1px solid var(--line);max-width:none;
+}
+.news-date{
+  font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.04em;
+  color:var(--ink-soft);padding-top:3px;
+}
+.news-item p{margin:0;max-width:none;}
+
+/* ---------- CV page ---------- */
+.cv-entry{
+  display:grid;grid-template-columns:130px 1fr;gap:20px;
+  padding:14px 0;max-width:none;
+}
+.cv-years{
+  font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.04em;
+  color:var(--ink-soft);padding-top:3px;
+}
+.cv-entry p{margin:0;max-width:none;}
+.cv-entry .role{font-weight:600;}
+
+/* ---------- Contact list ---------- */
+.contact-list{list-style:none;max-width:none;margin-top:8px;}
+.contact-list li{
+  padding:12px 0;border-bottom:1px solid var(--line);
+  display:flex;gap:18px;flex-wrap:wrap;
+}
+.contact-list .k{
+  font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--ink-soft);width:110px;flex:none;
+  padding-top:3px;
+}
+
+/* ---------- Personal page: icon + text items ---------- */
+.personal-items{margin:8px 0 12px;}
+.personal-item{
+  display:flex;align-items:center;gap:26px;
+  margin:0 0 30px;
+}
+.personal-item img{
+  width:120px;height:120px;flex:none;border-radius:16px;
+  object-fit:cover;border:1px solid var(--line);
+}
+.personal-item .ph-inline{
+  width:120px;height:120px;flex:none;border-radius:16px;
+  border:1px dashed var(--line);background:var(--card);
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  color:var(--ink-soft);font-family:'IBM Plex Mono',monospace;font-size:.7rem;
+  line-height:1.4;padding:8px;
+}
+.personal-item p{margin:0;color:var(--ink-soft);max-width:none;}
+@media (max-width:640px){
+  .personal-item{gap:18px;}
+  .personal-item img,.personal-item .ph-inline{width:90px;height:90px;}
+}
+
+/* ---------- Photo grid (personal page) ---------- */
+.photo-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+  gap:14px;margin:24px 0;
+}
+.photo-grid .ph{
+  aspect-ratio:4/3;border-radius:8px;border:1px dashed var(--line);
+  background:var(--card);display:flex;align-items:center;justify-content:center;
+  color:var(--ink-soft);font-family:'IBM Plex Mono',monospace;font-size:.75rem;
+  text-align:center;padding:12px;
+}
+.photo-grid img{
+  aspect-ratio:4/3;width:100%;border-radius:8px;object-fit:cover;
+  border:1px solid var(--line);
+}
+
+footer{
+  padding:38px 0 52px;border-top:1px solid var(--line);
+  font-size:.85rem;color:var(--ink-soft);
+}
+
+@media (max-width:640px){
+  .hero{grid-template-columns:1fr;gap:28px;padding-top:48px;}
+  .news-item,.cv-entry{grid-template-columns:1fr;gap:4px;}
+  .contact-list .k{width:100%;}
+}
+
+/* ---------- Research page: two-part structure ---------- */
+.research-section-head{
+  display:flex;gap:32px;align-items:center;flex-wrap:wrap;
+  margin:60px 0 22px;
+}
+.research-section-head img{
+  width:170px;height:auto;flex:none;
+  border-radius:16px;
+}
+.research-section-head .rsh-text{flex:1;min-width:260px;}
+.research-section-head h2{margin:0 0 10px;}
+.research-section-head p{margin:0;color:var(--ink-soft);max-width:560px;}
+
+.theme-cite{
+  margin-top:14px;padding-top:12px;border-top:1px solid var(--line);
+  font-size:.86rem;color:var(--ink-soft);
+}
+.theme-cite + .theme-cite{margin-top:8px;padding-top:0;border-top:none;}
+.theme-cite strong{color:var(--ink);font-weight:600;}
+
+.note-aside{
+  font-size:.92rem;color:var(--ink-soft);margin:18px 0 8px;
+  padding-left:20px;border-left:3px solid var(--line);
+}
+.field-note-with-img{
+  display:flex;gap:22px;align-items:center;margin:22px 0;
+}
+.field-note-with-img.reverse{flex-direction:row-reverse;}
+.field-note-with-img .note-aside{flex:1;margin:0;}
+.field-note-with-img img{
+  width:160px;flex:0 0 160px;border-radius:10px;
+  border:1px solid var(--line);
+}
+@media (max-width:640px){
+  .field-note-with-img,.field-note-with-img.reverse{flex-direction:column;align-items:stretch;}
+  .field-note-with-img img{width:100%;flex:none;}
+}
+
+@media (max-width:640px){
+  .research-section-head{margin-top:44px;}
+  .research-section-head img{width:130px;}
+}
+
+/* ---------- Native name / pronunciation ---------- */
+.name-native{
+  font-family:'Public Sans',system-ui,sans-serif;
+  font-size:1.3rem;color:var(--ink-soft);
+  margin-top:-6px;margin-bottom:22px;
+}
+.name-native .cn{color:var(--ink);font-weight:600;}
+
+/* ---------- Home cover (full-bleed banner + centered name) ---------- */
+.cover{
+  position:relative;width:100%;height:calc(100vh - 61px);min-height:520px;
+  overflow:hidden;
+}
+.cover img{width:100%;height:100%;object-fit:cover;display:block;}
+.cover::after{
+  content:"";position:absolute;inset:0;
+  background:rgba(31,42,56,.36);
+}
+.cover-text{
+  position:absolute;left:50%;top:18%;transform:translate(-50%,0);
+  z-index:1;text-align:center;width:100%;padding:0 24px;
+}
+.cover-text h1{
+  color:#fff;margin:0;
+  font-size:clamp(2.2rem,7vw,4.6rem);
+  font-weight:500;
+  letter-spacing:0.04em;
+  text-shadow:0 2px 24px rgba(0,0,0,.35);
+}
+@media (max-width:640px){
+  .cover{height:calc(100vh - 57px);min-height:420px;}
+}
+
+/* ---------- Home banner photo (legacy, unused if home is a cover page) ---------- */
+.banner{width:100%;height:300px;overflow:hidden;border-bottom:1px solid var(--line);}
+.banner img{width:100%;height:100%;object-fit:cover;display:block;}
+.banner-placeholder{
+  width:100%;height:300px;border-bottom:1px dashed var(--line);background:var(--card);
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  color:var(--ink-soft);font-family:'IBM Plex Mono',monospace;font-size:.85rem;line-height:1.6;
+  padding:16px;
+}
+@media (max-width:640px){.banner,.banner-placeholder{height:190px;}}
+
+/* ---------- Publications page: flowing-citation layout ---------- */
+.pub{padding:18px 0;border-bottom:1px solid var(--line);max-width:none;}
+.pub:last-child{border-bottom:none;}
+.pub-cite{margin:0 0 8px;}
+.pub-cite .me{font-weight:600;text-decoration:underline;text-underline-offset:2px;color:var(--ink);}
+.pub-links{
+  font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.02em;color:var(--spruce);
+}
+.pub-links a{color:var(--spruce);}
+.pub-links .sep{color:var(--line);margin:0 6px;}
+
+/* ---------- Personal page: editorial layout ---------- */
+.lede{font-size:1.12rem;color:var(--ink-soft);max-width:620px;margin-top:4px;}
+
+.ed{margin-top:120px;display:grid;column-gap:56px;}
+.ed:first-of-type{margin-top:64px;}
+.ed:last-of-type{margin-bottom:88px;}
+.ed-fig{margin:0;}
+.ed-fig img{
+  display:block;width:100%;height:100%;object-fit:cover;
+  border-radius:14px;border:1px solid var(--line);
+}
+.ed-fig figcaption{font-size:.84rem;line-height:1.55;color:var(--ink-soft);margin-top:12px;}
+.ed-text h2{margin:0 0 14px;font-size:1.7rem;}
+.ed-text h2::after{
+  content:"";display:block;width:34px;height:3px;border-radius:2px;
+  background:var(--token);margin-top:12px;opacity:.85;
+}
+.ed-text p{color:var(--ink-soft);margin-bottom:0;font-size:.97rem;line-height:1.78;}
+
+/* give the photo-led sections a little more room than the text column */
+@media (min-width:960px){
+  .ed{margin-left:-44px;margin-right:-44px;}
+}
+
+/* 1. From Chongqing: large anchor image left (~62%), text right and set lower */
+.ed-chongqing{grid-template-columns:62fr 38fr;align-items:start;}
+.ed-chongqing .ed-anchor img{aspect-ratio:4/3;}
+.ed-chongqing .ed-text{padding:112px 12px 0 0;}
+
+/* 2. In the kitchen: text above-left, wide image + smaller tall image, offset */
+.ed-kitchen{
+  grid-template-columns:1.85fr 1fr;
+  grid-template-areas:
+    "text  tall"
+    "wide  tall";
+  row-gap:34px;align-items:start;
+}
+.ed-kitchen .ed-text{grid-area:text;max-width:520px;padding-right:8px;}
+.ed-kitchen-wide{grid-area:wide;}
+.ed-kitchen-wide img{aspect-ratio:1714/1067;}
+.ed-kitchen-tall{grid-area:tall;align-self:end;margin-bottom:0;}
+.ed-kitchen-tall img{aspect-ratio:4/5;}
+
+/* 3. Exploring the outdoors: opening image, text, asymmetric gallery */
+.ed-outdoors{grid-template-columns:1fr;row-gap:44px;}
+.ed-open img{aspect-ratio:1700/786;}
+.ed-outdoors .ed-text{max-width:560px;margin-left:8%;}
+.ed-gallery{
+  display:grid;grid-template-columns:1.15fr 1fr;column-gap:28px;align-items:start;
+}
+.ed-g-tall img{aspect-ratio:3/4;object-position:50% 47%;}
+.ed-g-stack{display:grid;row-gap:24px;margin-top:64px;}
+.ed-g-a img{aspect-ratio:4/3;object-position:50% 55%;}
+.ed-g-b{margin-left:14%;}
+.ed-g-b img{aspect-ratio:16/10;object-position:50% 62%;}
+
+@media (max-width:760px){
+  .ed{margin-top:84px;row-gap:28px;}
+  .ed:first-of-type{margin-top:44px;}
+  .ed-chongqing{grid-template-columns:1fr;}
+  .ed-chongqing .ed-text{padding:6px 0 0;}
+  .ed-kitchen{grid-template-columns:1fr;grid-template-areas:"text" "wide" "tall";}
+  .ed-kitchen-tall{align-self:start;width:72%;margin-left:auto;}
+  .ed-outdoors .ed-text{margin-left:0;}
+  .ed-gallery{grid-template-columns:1fr;row-gap:20px;}
+  .ed-g-stack{margin-top:0;row-gap:20px;}
+  .ed-g-tall{width:82%;}
+  .ed-g-b{margin-left:0;width:88%;margin-left:auto;}
+}

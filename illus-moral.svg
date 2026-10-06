@@ -1,0 +1,39 @@
+<svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two cartoon children: one reaching out to comfort the other, who is sitting and looks sad, with a small heart floating above them">
+  <rect x="1" y="1" width="398" height="258" rx="20" fill="#FFFFFF" stroke="#DCE1E6" stroke-width="2"/>
+
+  <!-- ground -->
+  <line x1="34" y1="220" x2="366" y2="220" stroke="#DCE1E6" stroke-width="2"/>
+
+  <!-- Kid B: right, sitting, sad -->
+  <g>
+    <path d="M244 220 Q244 176 284 176 Q322 176 322 220 Z" fill="#5C6B7A"/>
+    <circle cx="283" cy="150" r="28" fill="#F3DFC4" stroke="#1F2A38" stroke-width="2.5"/>
+    <path d="M256 142 Q283 114 310 142 Q297 128 283 128 Q269 128 256 142 Z" fill="#1F2A38"/>
+    <path d="M266 146 L276 150" stroke="#1F2A38" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M300 146 L290 150" stroke="#1F2A38" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="273" cy="156" r="3" fill="#1F2A38"/>
+    <circle cx="293" cy="156" r="3" fill="#1F2A38"/>
+    <path d="M271 172 Q283 164 295 172" fill="none" stroke="#1F2A38" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M263 160 Q259 168 263 174 Q267 168 263 160 Z" fill="#7E93A8"/>
+  </g>
+
+  <!-- Kid A: left, standing, reaching out to comfort -->
+  <g>
+    <rect x="90" y="146" width="62" height="66" rx="18" fill="#3D5068"/>
+    <circle cx="121" cy="112" r="31" fill="#F3DFC4" stroke="#1F2A38" stroke-width="2.5"/>
+    <path d="M92 100 Q121 66 150 100 Q136 84 121 84 Q106 84 92 100 Z" fill="#1F2A38"/>
+    <circle cx="111" cy="114" r="3.2" fill="#1F2A38"/>
+    <circle cx="131" cy="114" r="3.2" fill="#1F2A38"/>
+    <path d="M109 126 Q121 134 133 126" fill="none" stroke="#1F2A38" stroke-width="2.4" stroke-linecap="round"/>
+    <!-- back arm -->
+    <path d="M92 164 Q72 178 76 200" fill="none" stroke="#3D5068" stroke-width="10" stroke-linecap="round"/>
+    <!-- reaching arm toward Kid B -->
+    <path d="M150 168 Q195 180 232 196" fill="none" stroke="#3D5068" stroke-width="10" stroke-linecap="round"/>
+  </g>
+
+  <!-- comforting hand near Kid B's shoulder -->
+  <circle cx="236" cy="198" r="7" fill="#F3DFC4" stroke="#1F2A38" stroke-width="2"/>
+
+  <!-- small heart floating above -->
+  <path d="M199 66 C199 58 210 58 210 66 C210 58 221 58 221 66 C221 76 210 84 210 84 C210 84 199 76 199 66 Z" fill="#E0863A" stroke="#28394A" stroke-width="1.5"/>
+</svg>
