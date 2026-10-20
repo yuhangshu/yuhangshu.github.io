@@ -68,11 +68,11 @@ main{padding-bottom:72px;}
 
 /* ---------- Home hero ---------- */
 .hero{
-  display:grid;grid-template-columns:260px 1fr;gap:44px;
+  display:grid;grid-template-columns:340px 1fr;gap:48px;
   align-items:start;padding:56px 0 40px;
 }
 .portrait{
-  width:260px;height:320px;border-radius:10px;object-fit:cover;
+  width:340px;height:auto;aspect-ratio:3/4;border-radius:12px;object-fit:cover;
   border:1px solid var(--line);background:var(--card);
 }
 .portrait-placeholder{
@@ -256,6 +256,7 @@ footer{
 
 @media (max-width:640px){
   .hero{grid-template-columns:1fr;gap:28px;padding-top:48px;}
+  .portrait{width:100%;max-width:340px;}
   .news-item,.cv-entry{grid-template-columns:1fr;gap:4px;}
   .contact-list .k{width:100%;}
 }
